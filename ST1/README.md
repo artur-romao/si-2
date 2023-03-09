@@ -14,7 +14,7 @@ It combines the latest in **neural networks** with **symbolic logic** (think exp
 
 
 ### How to run
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 

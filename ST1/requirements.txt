@@ -1,4 +1,9 @@
-sphinx
-sphinx_rtd_theme
-recommonmark
-sphinxcontrib-napoleon
+matplotlib
+networkx
+numpy
+scipy
+sklearn
+torch
+torchvision
+tqdm
+zincbase

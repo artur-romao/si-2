@@ -1,0 +1,27 @@
+## SI-2 - study of tools #1
+
+### Zincbase
+
+**ZincBase** is a state of the art knowledge base. It does the following:
+
+1. Extract facts (aka triples and rules) from unstructured data/text
+2. Store and retrieve those facts efficiently
+3. Build them into a graph
+4. Provide ways to query the graph, including via bleeding-edge graph neural networks.
+
+Zincbase exists to answer questions like "what is the probability that Tom likes LARPing", or "who likes LARPing", or "classify people into LARPers vs normies", or simulations like "what happens if all the LARPers become normies".
+It combines the latest in **neural networks** with **symbolic logic** (think expert systems and prolog), **graph search**, and **complexity theory**.
+
+
+### How to run
+```
+python3 -m venv venv
+source venv/bin/activate
+
+pip3 install -r requirements.txt
+```
+
+### References
+
+* https://zincbase.readthedocs.io/en/latest/README.html#requirements
+

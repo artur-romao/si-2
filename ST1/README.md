@@ -21,6 +21,15 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
+```bash
+# running examples of webUI
+python -m zincbase.web
+
+# in another terminal
+python3 basic.py
+python3 gol.py
+```
+
 ### References
 
 * https://zincbase.readthedocs.io/en/latest/README.html#requirements

@@ -21,6 +21,7 @@ kb.train_kg_model(steps=1000, batch_size=512) # takes < 1 minute
 
 kb.create_binary_classifier('locatedin', 'asia')
 print(kb.binary_classify('india', 'locatedin', 'asia'))
+# prints True
 
 print(kb.estimate_triple_prob('mali', 'locatedin', 'africa'))
 # prints a number close to 1
@@ -30,18 +31,12 @@ print(kb.get_most_likely('?', 'locatedin', 'africa', k=10))
 
 kb.fit_knn()
 
-print(kb.get_nearest_neighbors('portugal', k=5))
-# prints [{'distance': 0.0, 'entity': 'united_kingdom'}, {'distance': 2.7378, 'entity': 'finland'} ...]
-
-kb.fit_knn(entities=set([x['X'] for x in kb.query('neighbor(X, Y)')]))
-
-print(kb.get_nearest_neighbors('jordan', k=10))
-# prints [{'distance': 0.0, 'entity': 'jordan'}, {'distance': 2.7171, 'entity': 'lebanon'} ...]
+print(kb.get_nearest_neighbors('portugal', k=3))
+# prints [{'distance': 0.0, 'entity': 'portugal'}, {'distance': 2.6303, 'entity': 'gibraltar'}, {'distance': 2.6718, 'entity': 'spain'}]
 
 kb.create_multi_classifier('locatedin')
 
 print(kb.multi_classify('portugal', 'locatedin'))
-
-# prints 'australia_and_new_zealand'
+# prints 'southern_europe'
 
 print(list(kb.entities))

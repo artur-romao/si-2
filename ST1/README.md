@@ -21,7 +21,6 @@ pip3 install -r requirements.txt
 
 python3 start.py
 python3 countries.py
-...
 ```
 
 ### How to run the WebUI tool

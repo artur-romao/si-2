@@ -10,8 +10,8 @@ kb.store('preys_on(spike, cat)')
 kb.store('preys_on(tom, rat)')
 
 ## [example]
-#  is(jerry, rat)             =>     Y, Z 
-#  preys_on(tom, rat)         =>     X, Z 
+#  is(jerry, rat)              =>     Y, Z 
+#  preys_on(tom, rat)          =>     X, Z 
 #  fights_against(tom, jerry)  =>     X, Y 
 
 kb.store('fights_against(X,Y) :- is(Y,Z), preys_on(X,Z)')
@@ -24,8 +24,8 @@ print(kb.to_triples())      # [('spike', 'is', 'dog'), ('tom', 'is', 'cat'), ('j
                             #  ('spike', 'fights_against', 'tom'), ('tom', 'fights_against', 'jerry')]
 
 
-# Negative Example
-kb.store('~preys_on(jerry, tomatoes)')
+# Negative wxample
+kb.store('~preys_on(jerry, tomato)')
 
 # Store from a triple
 kb.from_triples([('jerry', 'preys_on', 'cheese')])
@@ -34,9 +34,6 @@ kb.from_triples([('jerry', 'preys_on', 'cheese')])
 query = kb.query("preys_on(jerry, Food)")
 print(list(query))          # [{'Food': 'cheese'}]
 
-query = kb.query("~preys_on(jerry, Food)")
-print(list(query))          # ?
-
 
 # Neighbors of a node
 neighbors_tom = kb.neighbors('tom')
@@ -44,7 +41,7 @@ print(neighbors_tom)        # [('cat', [{'pred': 'is'}]), ('rat', [{'pred': 'pre
 
 
 # Find a path from start_node to target_node
-path = kb.bfs('spike', 'jerry')
+path = kb.bfs('spike', 'jerry')     # [('fights_against', 'tom'), ('fights_against', 'jerry')]
 print(next(path))
 
 

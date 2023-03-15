@@ -7,7 +7,7 @@
 3. Build them into a graph
 4. Provide ways to query the graph, including via bleeding-edge graph neural networks.
 
-Zincbase exists to answer questions like "what is the probability that Tom likes LARPing", or "who likes LARPing", or "classify people into LARPers vs normies", or simulations like "what happens if all the LARPers become normies".
+Zincbase exists to answer questions like "What is the probability that Brazil neighbours Ecuador?", or "Which countries belong to South America?", or "Classify countries location into South America or Europe?", or simulations like "What happens if South America neighbours Africa?".
 
 It combines the latest in **neural networks** with **symbolic logic** (think expert systems and prolog), **graph search**, and **complexity theory**.
 
